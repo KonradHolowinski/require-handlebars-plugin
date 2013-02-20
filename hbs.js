@@ -453,7 +453,7 @@ define([
             }
 
             var path,
-                omitExtension = config.hbs && config.hbs.templateExtension === false;
+                omitExtension = config.hbs && config.hbs.templateExtension && config.hbs.templatesBasePath === false;
             if(omitExtension) {
               path = parentRequire.toUrl(name);
             } else {
